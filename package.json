@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "hinagata-web",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "parcel ./examples/*.html",
+    "build": "tsc --project ./tsconfig.build.json && npm run bundle",
+    "bundle": "parcel build ./.temp/index.js --out-dir build --out-file name.min.js --global name --target node --bundle-node-modules --no-source-maps --no-content-hash --no-cache"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^1.18.2",
+    "typescript": "~4.3.2"
+  }
+}
