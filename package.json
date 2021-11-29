@@ -8,17 +8,24 @@
   "scripts": {
     "dev": "parcel ./examples/*.html",
     "build": "tsc --project ./tsconfig.build.json && npm run bundle",
-    "bundle": "parcel build ./.temp/index.js --out-dir build --out-file name.min.js --global name --target node --bundle-node-modules --no-source-maps --no-content-hash --no-cache"
+    "bundle": "parcel build ./.temp/index.js --out-dir build --out-file name.min.js --global name --target node --bundle-node-modules --no-source-maps --no-content-hash --no-cache",
+    "test": "jest --passWithNoTests"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.3",
     "@types/node": "^12.6.2",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
+    "babel-jest": "^27.3.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^27.3.1",
     "parcel-bundler": "^1.12.5",
     "prettier": "^1.18.2",
     "typescript": "~4.3.2"
